@@ -32,6 +32,7 @@ html, body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: "Manrope", sans-serif;
+  background: #fbfbfb;
 }
 
 input, button, textarea {
