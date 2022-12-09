@@ -1,39 +1,221 @@
-
+@charset "UTF-8";
 /*Обнуление*/
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
-
-html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+:focus, :active {
+  outline: none;
 }
-input,button,textarea{font-family:inherit;}
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+a:focus, a:active {
+  outline: none;
+}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Manrope", sans-serif;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 /*--------------------*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.main {
+  flex: 1 1 100%;
+}
+
+.image {
+  max-width: 100%;
+}
+
+.header__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 10px;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+}
+.header__nav > *:not(:last-child) {
+  margin-right: 15px;
+}
+
+.nav__item {
+  text-align: center;
+  color: black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.nav__link {
+  display: inline-block;
+  border: 3px solid #78a4d2;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+.nav__link:hover {
+  transform: scale(1.1);
+  color: white;
+  transition: 0.3s;
+}
+.nav__link:hover::before {
+  left: 0;
+}
+.nav__link:active {
+  transform: scale(0.9);
+}
+.nav__link::before {
+  content: "";
+  transition: 0.3s;
+  background: #96c3f9;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.main__container {
+  margin-top: 30px;
+}
+.main__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.main__content {
+  display: flex;
+  align-items: center;
+}
+.main__content a:hover {
+  text-decoration: underline;
+}
+.main__about {
+  min-width: 50%;
+  padding: 20px;
+}
+.main__about a {
+  color: black;
+}
+.main__about > * {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px 15px 0;
+  border-bottom: 2px solid #96c3f9;
+  border-radius: 0 0 10px 0;
+}
+.main__phone {
+  display: flex;
+  align-items: center;
+}
+.main__phone > *:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.footer {
+  background: #96c3f9;
+}
+.footer__content {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.footer__content a {
+  color: white;
+}
+.footer__content a:hover {
+  text-decoration: underline;
+}
+.footer__content > * {
+  border-left: 2px solid #558ab6;
+  border-right: 2px solid #558ab6;
+  padding: 10px;
+}
+.footer__hotline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px 0;
+}
+.footer__hotline > * {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 5px;
+}
