@@ -1,7 +1,17 @@
-const items = document.querySelectorAll('.nav__item')
+function onEntry(entry) {
+   entry.forEach(change => {
+      if (change.isIntersecting) {
+         change.target.classList.add('element-show');
+      }
+   });
+}
 
-window.onload = () => {
-   for (let i of items) {
-      setTimeout(() => { i.classList.add('show') }, 1000)
-   }
+let options = {
+   threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+   observer.observe(elm);
 }
