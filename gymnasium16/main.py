@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from flask_restful import abort
-
+import sqlite3
 
 from data import db_session
 from forms.news_form import NewsForm
@@ -114,7 +114,7 @@ def news_delete(id):
 
 
 def main():
-    db_session.global_init("db/news.db")
+    db_session.global_init("./db/news.db")
     app.run()
 
 
