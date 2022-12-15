@@ -7,6 +7,13 @@
    <title>Title</title>
    <link rel="stylesheet" href="css/style.css">
 
+   <script src="https://unpkg.com/scrollreveal"></script>
+   <script>
+      ScrollReveal({ reset: false, opacity: 0 });
+   </script>
+
+   <link rel="shortcut icon" href="./img/ico/school.ico">
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,15 +22,18 @@
 
 <body>
    <div class="wrapper">
+      <div class="top__button" data-anchor="header">
+         &#5169;
+      </div>
       <header class="header">
-         <div class="header__container _container">
-            <div class="header__content element-animation">
+         <div class="header__container _container" id="header">
+            <div class="header__content">
                <nav class="header__nav">
-                  <a href="#home" class="header__link">Главная</a>
-                  <a href="#achivements" class="header__link">Наши достижения</a>
-                  <a href="#news" class="header__link">Новости</a>
-                  <a href="#about" class="header__link">О нас</a>
-                  <a href="#contact" class="header__link">Контакты</a>
+                  <a href="#" data-anchor='home' class="header__link">Главная</a>
+                  <a href="#" data-anchor='achivements' class="header__link">Наши достижения</a>
+                  <a href="#" data-anchor='news' class="header__link">Новости</a>
+                  <a href="#" data-anchor='about' class="header__link">О нас</a>
+                  <a href="#" data-anchor='contact' class="header__link">Контакты</a>
                </nav>
             </div>
          </div>
@@ -32,21 +42,21 @@
          <div class="page__home" id="home">
             <div class="home__container _container">
                <div class="home__content">
-                  <h1 class="home__title title element-animation">Сайт Гимназии №16</h1>
-                  <div class="home__descriprion element-animation">Lorem ipsum dolor sit, amet consectetur adipisicing
+                  <h1 class="home__title title">Сайт Гимназии №16</h1>
+                  <div class="home__descriprion">Lorem ipsum dolor sit, amet consectetur adipisicing
                      elit. Illo numquam
                      nam sapiente ex dolores recusandae totam, cumque, minima eaque repellat suscipit iste alias earum
                      id pariatur aspernatur voluptates ipsa quia.</div>
-                  <a href="#" class="home__ask element-animation">Задать вопрос</a>
+                  <a href="#" class="home__ask">Задать вопрос</a>
                </div>
             </div>
          </div>
          <div class="page__achivements" id="achivements">
             <div class="achivements__container _container">
                <div class="achivements__content">
-                  <h2 class="achivements__title title element-animation">Наши достижения</h2>
+                  <h2 class="achivements__title title">Наши достижения</h2>
                   <div class="achivements__grid">
-                     <div class="achivements__item element-animation">
+                     <div class="achivements__item">
                         <div class="achivements__ico">
                            <img src="./img/achivements/icons/school.svg" class='image' alt="Achivement">
                         </div>
@@ -57,7 +67,7 @@
                            Description
                         </div>
                      </div>
-                     <div class="achivements__item element-animation">
+                     <div class="achivements__item">
                         <div class="achivements__ico">
                            <img src="./img/achivements/icons/school.svg" class='image' alt="Achivement">
                         </div>
@@ -68,7 +78,7 @@
                            Description
                         </div>
                      </div>
-                     <div class="achivements__item element-animation">
+                     <div class="achivements__item">
                         <div class="achivements__ico">
                            <img src="./img/achivements/icons/school.svg" class='image' alt="Achivement">
                         </div>
@@ -79,7 +89,7 @@
                            Description
                         </div>
                      </div>
-                     <div class="achivements__item element-animation">
+                     <div class="achivements__item">
                         <div class="achivements__ico">
                            <img src="./img/achivements/icons/school.svg" class='image' alt="Achivement">
                         </div>
@@ -90,7 +100,7 @@
                            Description
                         </div>
                      </div>
-                     <div class="achivements__item element-animation">
+                     <div class="achivements__item">
                         <div class="achivements__ico">
                            <img src="./img/achivements/icons/school.svg" class='image' alt="Achivement">
                         </div>
@@ -101,7 +111,7 @@
                            Description
                         </div>
                      </div>
-                     <div class="achivements__item element-animation">
+                     <div class="achivements__item">
                         <div class="achivements__ico">
                            <img src="./img/achivements/icons/school.svg" class='image' alt="Achivement">
                         </div>
@@ -119,11 +129,30 @@
          </div>
          <div class="page__news" id="news">
             <div class="news__container _container">
-               <div class="news__content element-animation">
+               <div class="news__content">
                   <div class="news__title title">Новости нашей школы</div>
                   <div class="news__subtitle">События, которые происходят в школе</div>
                   <div class="news__grid">
-                     <div class="news__item element-animation">
+                     <div class="news__item">
+                        <div class="news__image">
+                           <img src="./img/3102304.jpg" class='image' alt="">
+                        </div>
+                        <div class="news__about">Текст</div>
+                        <div class="news__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                           Molestias illum, culpa optio debitis vitae deleniti animi cumque voluptates, quae laborum
+                           itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
+                        <a href="#" class="news__button button__flare">Читать далее</a>
+                     </div>
+                     <div class="news__item">
+                        <div class="news__image">
+                           <img src="./img/news/example.jpg" class='image' alt="">
+                        </div>
+                        <div class="news__about">Текст</div>
+                        <div class="news__description">Lorem itae deleniti animi cumque voluptates, quae laborum
+                           itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
+                        <a href="#" class="news__button button__flare">Читать далее</a>
+                     </div>
+                     <div class="news__item">
                         <div class="news__image">
                            <img src="./img/news/example.jpg" class='image' alt="">
                         </div>
@@ -133,7 +162,7 @@
                            itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
                         <a href="#" class="news__button button__flare">Читать далее</a>
                      </div>
-                     <div class="news__item element-animation">
+                     <div class="news__item">
                         <div class="news__image">
                            <img src="./img/news/example.jpg" class='image' alt="">
                         </div>
@@ -143,7 +172,7 @@
                            itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
                         <a href="#" class="news__button button__flare">Читать далее</a>
                      </div>
-                     <div class="news__item element-animation">
+                     <div class="news__item">
                         <div class="news__image">
                            <img src="./img/news/example.jpg" class='image' alt="">
                         </div>
@@ -153,7 +182,7 @@
                            itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
                         <a href="#" class="news__button button__flare">Читать далее</a>
                      </div>
-                     <div class="news__item element-animation">
+                     <div class="news__item">
                         <div class="news__image">
                            <img src="./img/news/example.jpg" class='image' alt="">
                         </div>
@@ -163,38 +192,17 @@
                            itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
                         <a href="#" class="news__button button__flare">Читать далее</a>
                      </div>
-                     <div class="news__item element-animation">
-                        <div class="news__image">
-                           <img src="./img/news/example.jpg" class='image' alt="">
-                        </div>
-                        <div class="news__about">Текст</div>
-                        <div class="news__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                           Molestias illum, culpa optio debitis vitae deleniti animi cumque voluptates, quae laborum
-                           itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
-                        <a href="#" class="news__button button__flare">Читать далее</a>
-                     </div>
-                     <div class="news__item element-animation">
-                        <div class="news__image">
-                           <img src="./img/news/example.jpg" class='image' alt="">
-                        </div>
-                        <div class="news__about">Текст</div>
-                        <div class="news__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                           Molestias illum, culpa optio debitis vitae deleniti animi cumque voluptates, quae laborum
-                           itaque est in deserunt accusamus molestiae sunt necessitatibus? Dignissimos, autem?</div>
-                        <a href="#" class="news__button button__flare">Читать далее</a>
-                     </div>
-
                   </div>
-                  <a href="#" class="news__read button__flare element-animation">Смотреть все новости</a>
+                  <a href="#" class="news__read button__flare">Смотреть все новости</a>
                </div>
             </div>
          </div>
          <div class="page__about" id="about">
             <div class="about__container _container">
-               <div class="about__title title element-animation">
+               <div class="about__title title">
                   Информация о нас
                </div>
-               <div class="about__content element-animation">
+               <div class="about__content">
                   <div class="about__image image">
                      <img src="./img/about/example.jpg" class='image' alt="">
                   </div>
@@ -209,7 +217,7 @@
          </div>
          <div class="page__contact" id="contact">
             <div class="contact__container _container">
-               <div class="contact__content element-animation">
+               <div class="contact__content">
                   <div class="contact__title">
                      Задайте вопрос руководству
                   </div>
