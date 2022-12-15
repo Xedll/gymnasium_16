@@ -125,7 +125,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page__home {
-  background: #363434;
+  background-image: url("../img/home/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 .page__news {
   background: #363434;
@@ -195,12 +201,30 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
 }
 
+.home__bg {
+  background-image: url("../img/home/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 200%;
+  height: 100%;
+  z-index: 0;
+  filter: blur(10px) brightness(0.75) contrast(1.2) grayscale(0.5);
+}
+.home__container {
+  position: relative;
+}
 .home__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 170px 0 125px 0;
   color: white;
+}
+.home__content > * {
+  z-index: 1;
 }
 .home__title {
   border-bottom: 2px solid white;
@@ -215,6 +239,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .home__ask {
+  display: block;
   font-size: 22px;
   color: white;
   padding: 20px 95px;
