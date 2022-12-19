@@ -82,12 +82,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top__button {
-  display: block;
+  z-index: 5;
+  display: flex;
   color: black;
   position: fixed;
   top: calc(100% - 90px);
   left: calc(100% - 90px);
-  padding: 20px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   border: 2px solid #424242;
   background: #fff;
@@ -124,15 +128,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 70px;
 }
 
-.page__home {
-  background-image: url("../img/home/bg.jpg");
-  background-position: center center;
-  background-size: cover;
-  display: block;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
 .page__news {
   background: #363434;
 }
