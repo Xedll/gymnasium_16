@@ -24,7 +24,9 @@
     <div>{{ news.title }}</div>
     <img src="../static/img/news/{{ news.img_src }}" alt="">
     <div>{{ news.content }}</div>
-    <a href="/news/delete/{{ news.id }}" class="btn btn-danger">Удалить</a>
+    {% if current_user.is_authenticated %}
+        <a href="/news/delete/{{ news.id }}" class="btn btn-danger">Удалить</a>
+    {% endif %}
     <script src="../static/js/main.js"></script>
   </body>
 </html>
