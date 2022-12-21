@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({ reset: false, opacity: 0 });
+    </script>
+
+    <link rel="shortcut icon" href="../static/img/ico/school.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="top__button" data-anchor="header">&#5169;</div>
+      <header class="header">
+        <div class="header__container _container" id="header">
+          <div class="header__content">
+            <nav class="header__nav">
+              <a href="#" data-anchor="home" class="header__link">Главная</a>
+              <a href="#" data-anchor="achivements" class="header__link"
+                >Наши достижения</a
+              >
+              <a href="#" data-anchor="news" class="header__link">Новости</a>
+              <a href="#" data-anchor="about" class="header__link">О нас</a>
+              <a href="#" data-anchor="contact" class="header__link"
+                >Контакты</a
+              >
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="page__home" id="home">
+          <div class="home__container _container">
+            <div class="home__bg"></div>
+            <div class="home__content">
+              <h1 class="home__title title">Сайт Гимназии №16</h1>
+              <div class="home__descriprion">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
+                numquam nam sapiente ex dolores recusandae totam, cumque, minima
+                eaque repellat suscipit iste alias earum id pariatur aspernatur
+                voluptates ipsa quia.
+              </div>
+              <a href="#" class="home__ask">Задать вопрос</a>
+            </div>
+          </div>
+        </div>
+        <div class="page__achivements" id="achivements">
+          <div class="achivements__container _container">
+            <div class="achivements__content">
+              <h2 class="achivements__title title">Наши достижения</h2>
+              <div class="achivements__grid">
+                <div class="achivements__item">
+                  <div class="achivements__ico">
+                    <img
+                      src="../static/img/achivements/icons/school.svg"
+                      class="image"
+                      alt="Achivement"
+                    />
+                  </div>
+                  <div class="achivements__about">Title</div>
+                  <div class="achivements__description">Description</div>
+                </div>
+                <div class="achivements__item">
+                  <div class="achivements__ico">
+                    <img
+                      src="../static/img/achivements/icons/school.svg"
+                      class="image"
+                      alt="Achivement"
+                    />
+                  </div>
+                  <div class="achivements__about">Title</div>
+                  <div class="achivements__description">Description</div>
+                </div>
+                <div class="achivements__item">
+                  <div class="achivements__ico">
+                    <img
+                      src="../static/img/achivements/icons/school.svg"
+                      class="image"
+                      alt="Achivement"
+                    />
+                  </div>
+                  <div class="achivements__about">Title</div>
+                  <div class="achivements__description">Description</div>
+                </div>
+                <div class="achivements__item">
+                  <div class="achivements__ico">
+                    <img
+                      src="../static/img/achivements/icons/school.svg"
+                      class="image"
+                      alt="Achivement"
+                    />
+                  </div>
+                  <div class="achivements__about">Title</div>
+                  <div class="achivements__description">Description</div>
+                </div>
+                <div class="achivements__item">
+                  <div class="achivements__ico">
+                    <img
+                      src="../static/img/achivements/icons/school.svg"
+                      class="image"
+                      alt="Achivement"
+                    />
+                  </div>
+                  <div class="achivements__about">Title</div>
+                  <div class="achivements__description">Description</div>
+                </div>
+                <div class="achivements__item">
+                  <div class="achivements__ico">
+                    <img
+                      src="../static/img/achivements/icons/school.svg"
+                      class="image"
+                      alt="Achivement"
+                    />
+                  </div>
+                  <div class="achivements__about">Title</div>
+                  <div class="achivements__description">Description</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page__news" id="news">
+          <div class="news__container _container">
+            <div class="news__content">
+              <div class="news__title title">Новости нашей школы</div>
+              <div class="news__subtitle">
+                События, которые происходят в школе
+              </div>
+              <div class="news__grid">
+                {% for item in news %}
+                <div class="news__item">
+                  <div class="news__image">
+                    <img src="{{ item["img"] }}" class='image' alt="">
+                  </div>
+                  <div class="news__about">{{ item["title"] }}</div>
+                  <div class="news__description">{{ item["description"] }}</div>
+                  <a
+                    href="/news/{{ item.id }}"
+                    class="news__button button__flare"
+                    >Читать далее</a
+                  >
+                </div>
+                {% endfor %}
+              </div>
+              <a href="#" class="news__read button__flare"
+                >Смотреть все новости</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="page__about" id="about">
+          <div class="about__container _container">
+            <div class="about__title title">Информация о нас</div>
+            <div class="about__content">
+              <div class="about__image image">
+                <img src="../static/img/about/example.jpg" class="image" alt="" />
+              </div>
+              <div class="about__text">
+                <div class="about__subtitle">О школьной деятельности</div>
+                <div class="about__description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Iusto, quia harum et consequatur ad rerum minima explicabo
+                  vitae optio ex dignissimos architecto. Quia praesentium
+                  consequuntur amet est dolorem, totam facere!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page__contact" id="contact">
+          <div class="contact__container _container">
+            <div class="contact__content">
+              <div class="contact__title">Задайте вопрос руководству</div>
+              <form action="" class="contact__form">
+                <p>Введите имя</p>
+                <input
+                  type="text"
+                  class="contact__name"
+                  placeholder="Введите имя"
+                />
+                <p>Задайте Ваш вопрос</p>
+                <input
+                  type="text"
+                  class="contact__question"
+                  placeholder="Напишите что-нибудь"
+                />
+                <button href="" class="contact__button">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container _container">
+          <div class="footer__content">
+            <div class="footer__name">
+              © 2009–2022 «Электронное образование Республики Татарстан»
+            </div>
+            <div class="footer__hotline hotline">
+              <div class="hotline__title">Техподдержка</div>
+              <div class="hotline__tel">
+                <p>Тел.:</p>
+                <a href="tel:88435257099">8 (843) 525-70-99</a>
+              </div>
+              <div class="hotline__mail">
+                <p>E-Mail:</p>
+                <a href="mailto:help.edu@tatar.ru">help.edu@tatar.ru</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
