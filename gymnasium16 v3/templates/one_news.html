@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div class="page__news">
+      <div class="news__one">
+        <div class="title__news__one">{{ item["title"] }}</div>
+        <div class="img__news__one">
+          <img src="{{ item["img"] }}" class='img__news__one' alt="">
+        </div>
+        <div class="content__news__one">{{ item["content"] }}</div>
+        {% if current_user.is_authenticated %}
+        <a href="/news/edit/{{ item["id"] }}" class="btn btn-primary">Изменить</a>
+        <a href="/news/delete/{{ item["id"] }}" class="btn btn-danger">Удалить</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <script src="../static/js/main.js"></script>
+  </body>
+</html>
